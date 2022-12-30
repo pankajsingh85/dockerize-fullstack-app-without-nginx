@@ -20,11 +20,11 @@ app.use(express.json());
 app.use('/uploads',express.static('uploads'));
 
 
-// db.sequelize.sync({ alter: true }).then(() => {
-//      console.log("Drop and Resync with { force: true }");
-// }).catch((e)=>{
-//   console.log(e);
-// });
+db.sequelize.sync({ }).then(() => {
+     console.log("Drop and Resync with {  }");
+}).catch((e)=>{
+  console.log(e);
+});
 
 app.set('view engine', 'ejs');
 

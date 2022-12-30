@@ -16,6 +16,7 @@ services:
 
   
   node: # name of the second service
+    image: backend
     build: backend # specify the directory of the Dockerfile
     environment:
       MYSQL_DATABASE: exit_test
@@ -29,6 +30,7 @@ services:
       - db
 
   angular: # name of the first service
+    image: frontend
     build: frontend # specify the directory of the Dockerfile
     ports:
     - "4200:80" 
